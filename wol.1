@@ -1,0 +1,72 @@
+.\"Copyright (c) 2009-2010 Michael Sanders
+.\"
+.\"Permission is hereby granted, free of charge, to any person obtaining a copy
+.\"of this software and associated documentation files (the "Software"), to deal
+.\"in the Software without restriction, including without limitation the rights
+.\"to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+.\"copies of the Software, and to permit persons to whom the Software is
+.\"furnished to do so, subject to the following conditions:
+.\"
+.\"The above copyright notice and this permission notice shall be included in all
+.\"copies or substantial portions of the Software.
+.\"
+.\"THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+.\"IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+.\"FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+.\"AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+.\"LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+.\"OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+.\"SOFTWARE.
+.TH WOL 1
+
+.SH NAME
+wol \- Wake on lan command line client.
+
+.SH SYNOPSIS
+.B wol
+[\fB-q\fR]
+[\fB-b\fR \fIbcast\fR]
+[\fB-p\fR \fIport\fR]
+\fIdest\fR
+
+.SH DESCRIPTION
+\fBwol\fR sends a magic datagram paquet to a network interface to wake up the target device.
+
+The target device is referenced as \fIdest\fR, its device MAC address.
+
+.SH OPTIONS
+.IP "\fB-q\fR"
+Quiet mode.
+.IP "\fB-b\fR \fIbcast\fR"
+Broadcast IP address.
+.IP "\fB-p\fR \fIport\fR"
+Target listen port.
+
+.SH EXAMPLES
+A simple example to wake up a device with MAC address AA:BB:CC:DD:EE:FF :
+
+	$ wol AA:BB:CC:DD:EE:FF
+
+To wake up the device with MAC address AA:BB:CC:DD:EE:FF through the class C broadcast IP 192.168.0.255 without any output message :
+
+	$ wol -q -b 192.168.0.255 AA:BB:CC:DD:EE:FF
+
+.SH AUTHOR
+Michael Sanders <msanders42@gmail.com>
+
+.SH CONTRIBUTOR
+Guillaume Wallet <wallet.guillaume@gmail.com>
+
+.SH SEE ALSO
+http://en.wikipedia.org/wiki/Wake-on-LAN
+
+.SH LICENSE
+Copyright (c) 2009-2010 Michael Sanders
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
