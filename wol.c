@@ -41,6 +41,7 @@
 #include <stddef.h> /* size_t */
 #include <limits.h> /* UINT_MAX */
 #include <errno.h> /* errno */
+#include <getopt.h>
 
 /* Sends Wake-On-LAN packet to given address with the given options, where the
  * address is in the form "XX:XX:XX:XX:XX:XX" (the colons are optional).
