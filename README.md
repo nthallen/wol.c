@@ -10,7 +10,7 @@ $ make
 # make install
 ```
 
-By default, this installs the binary in _/usr/local/bin_ and documenation in _/usr/local/share/man_.
+By default, this installs the binary in _/usr/local/bin_ and documentation in _/usr/local/share/man_.
 To change this, use:
 
 ```
