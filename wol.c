@@ -108,6 +108,7 @@ int main(int argc, char * const argv[])
 					print_option_error(optopt, OPT_INT_REQUIRED);
 					return 1;
 				}
+				break;
 			case '?': /* unrecognized option */
 				if (optopt == 'b' || optopt == 'p' || optopt == 'd') {
 					return print_option_error(optopt, OPT_ARG_REQUIRED), 1;
