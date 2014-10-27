@@ -3,7 +3,6 @@
  * Author: Michael Sanders
  * Usage: wol [-q] [-b <bcast>] [-p <port>] <dest>
  * Compile it with: gcc -Wall -Os -DNDEBUG -o wol wol.c
- * Last updated: December 28, 2009
  *
  * LICENSE
  * --------------------------------------------------
@@ -30,18 +29,16 @@
  *
  * ************************************************** */
 
-#include <stdio.h> /* printf(), etc. */
-#include <ctype.h> /* isdigit() */
-#include <assert.h> /* assert() */
-#include <unistd.h> /* getopt() */
-#include <stdlib.h> /* exit() */
-#include <string.h> /* memset() & memcpy() */
-#include <arpa/inet.h> /* htonl() & htons() */
-#include <sys/socket.h> /* socket(), sendto(), setsockopt() */
-#include <stddef.h> /* size_t */
-#include <limits.h> /* UINT_MAX */
-#include <errno.h> /* errno */
+#include <arpa/inet.h>
+#include <assert.h>
+#include <ctype.h>
+#include <errno.h>
 #include <getopt.h>
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
 
 /* Sends Wake-On-LAN packet to given address with the given options, where the
  * address is in the form "XX:XX:XX:XX:XX:XX" (the colons are optional).
