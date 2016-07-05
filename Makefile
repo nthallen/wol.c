@@ -22,6 +22,7 @@ SOURCES = wol.c
 MANPAGE = wol.1
 OBJECTS = $(SOURCES:.c=.o)
 CFLAGS = -Wall -Os -DNDEBUG
+LDFLAGS = -lsocket
 PREFIX ?= /usr/local
 
 .PHONY: install uninstall clean mrproper
