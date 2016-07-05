@@ -124,7 +124,7 @@ int main(int argc, char * const argv[])
 			fputs("Error sending packet.\n", stderr);
 			return 1;
 		} else if (!quiet) {
-			printf("Packet sent to %08X-%s on port %d\n", htonl(bcast),
+			printf("Packet sent to %08lX-%s on port %d\n", htonl(bcast),
 			                                              argv[optind],
 			                                              port);
 		}
